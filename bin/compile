@@ -73,6 +73,7 @@ configure_export_env() {
 export PATH="\$HOME/$QT_BIN_DIR:\$PATH"
 export QT_QPA_PLATFORM_PLUGIN_PATH=\$HOME/.apt/usr/lib/x86_64-linux-gnu/qt5/plugins/
 export QT_DIR=\$HOME/.apt/usr/lib/x86_64-linux-gnu/qt5/
+ls -l $QT_DIR
 EOF
 }
 
