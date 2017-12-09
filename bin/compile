@@ -56,8 +56,8 @@ configure_qt() {
 
 	cat << EOF >$BUILD_DIR/$QT_BIN_DIR/qt.conf
 [Paths]
-Prefix=/app/.apt/usr/lib/x86_64-linux-gnu/qt5/
-Headers=/app/.apt/usr/include/qt5/
+Prefix=$BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/qt5/
+Headers=$BUILD_DIR/.apt/usr/include/qt5/
 EOF
 }
 
