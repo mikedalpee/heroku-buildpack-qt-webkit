@@ -28,6 +28,7 @@ install_system_deps() {
 	local build_tmpdir=$(mktemp -d)
 	mkdir -p $build_tmpdir
 	cat << EOF >$build_tmpdir/Aptfile
+libxcomposite-dev
 qt5-default
 qtdeclarative5-dev
 libqt5webkit5-dev
