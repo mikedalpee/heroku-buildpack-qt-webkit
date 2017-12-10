@@ -28,7 +28,6 @@ install_system_deps() {
 	local build_tmpdir=$(mktemp -d)
 	mkdir -p $build_tmpdir
 	cat << EOF >$build_tmpdir/Aptfile
-:repo:deb http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu xenial main
 libpcre16-3
 libxcomposite1
 libxcomposite-dev
@@ -47,8 +46,9 @@ libgl1-mesa-dev
 libgl1-mesa
 libgl1-mesa-glx
 libgl1-mesa-dri
+libegl1-mesa
+mesa-utils-extra
 xvfb
-nvidia-384
 EOF
 
 	local cache_tmpdir=$(mktemp -d)
