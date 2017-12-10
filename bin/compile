@@ -33,7 +33,7 @@ libxcomposite1
 libxcomposite-dev
 libxdamage1
 libxfixes-dev
-libxfixes-dev
+libxfixes3
 qt5-default
 qtdeclarative5-dev
 libqt5webkit5-dev
