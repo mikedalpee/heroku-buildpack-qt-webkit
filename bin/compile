@@ -28,6 +28,7 @@ install_system_deps() {
 	local build_tmpdir=$(mktemp -d)
 	mkdir -p $build_tmpdir
 	cat << EOF >$build_tmpdir/Aptfile
+:repo:deb http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu xenial main
 libpcre16-3
 libxcomposite1
 libxcomposite-dev
