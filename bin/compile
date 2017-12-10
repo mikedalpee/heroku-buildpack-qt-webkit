@@ -31,6 +31,9 @@ install_system_deps() {
 libpcre16-3
 libxcomposite1
 libxcomposite-dev
+libxdamage1
+libxfixes-dev
+libxfixes-dev
 qt5-default
 qtdeclarative5-dev
 libqt5webkit5-dev
