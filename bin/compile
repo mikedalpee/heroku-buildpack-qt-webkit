@@ -34,10 +34,16 @@ libxcomposite-dev
 libxdamage1
 libxfixes-dev
 libxfixes3
+libsm6
+libxi6
+libice6
+libxt6
 qt5-default
 qtdeclarative5-dev
 libqt5webkit5-dev
+libqt5webkit
 libgl1-mesa-dev
+libgl1-mesa
 libgl1-mesa-glx
 libgl1-mesa-dri
 xvfb
