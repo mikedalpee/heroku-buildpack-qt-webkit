@@ -65,6 +65,14 @@ EOF
 	mv $build_tmpdir/.profile.d/000_apt.sh $BUILD_DIR/.profile.d/
 
 	rm -rf $buildpack_tmpdir $build_tmpdir $cache_tmpdir
+
+	ln -s $BUILD_DIR/.apt/usr/include/x86_64-linux-gnu/qt5 $BUILD_DIR/.apt/usr/include/qt5
+    ln -s $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/qt5/lib
+    ln -s /lib/x86_64-linux-gnu/libudev.so.0 $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/lib/libudev.so.1
+    ln -s /lib/x86_64-linux-gnu/libgcrypt.so.20 $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/lib/libgcrypt.so.11
+    rm $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/libGL.so
+    cp -av $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/mesa/*
+    rm $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/ld.so.conf
 }
 
 configure_qt() {
