@@ -67,7 +67,7 @@ EOF
 
 	ln -s $BUILD_DIR/.apt/usr/include/x86_64-linux-gnu/qt5 $BUILD_DIR/.apt/usr/include/qt5
     ln -s $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/qt5/lib
-    ln -s /lib/x86_64-linux-gnu/libudev.so.1 $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/libudev.so.1
+    ln -s /lib/x86_64-linux-gnu/libudev.so.1 $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/libudev.so.0
     ln -s /lib/x86_64-linux-gnu/libgcrypt.so.20 $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/libgcrypt.so.11
     rm $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/libGL.so
     cp -av $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/mesa/* $BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/
