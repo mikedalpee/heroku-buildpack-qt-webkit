@@ -28,6 +28,7 @@ install_system_deps() {
 	local build_tmpdir=$(mktemp -d)
 	mkdir -p $build_tmpdir
 	cat << EOF >$build_tmpdir/Aptfile
+xkb-data
 libpcre16-3
 libxcomposite1
 libxcomposite-dev
@@ -96,12 +97,12 @@ freedom_patch_xvfb() {
 	topic "Configuring Xvfb for apt"
 
 	# patch Xvfb to use /app/.. paths instead of hardcoded wrong values
-	sed -i s:/usr/bin:/app/nib: "/app/.apt/usr/bin/Xvfb"
+	sed -i s:/usr/bin:/app/nib: "$BUILD_DIR/.apt/usr/bin/Xvfb"
 	# create symlinks for Xvfb to use /app/.apt/usr/...
-	ln -s /app/.apt/usr/bin /app/nib
+	ln -s $BUILD_DIR/.apt/usr/bin $BUILD_DIR/nib
 }
 
 install_system_deps
 configure_qt
 configure_export_env
-#freedom_patch_xvfb
+freedom_patch_xvfb
