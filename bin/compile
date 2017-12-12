@@ -104,4 +104,4 @@ freedom_patch_xvfb() {
 install_system_deps
 configure_qt
 configure_export_env
-freedom_patch_xvfb
+#freedom_patch_xvfb
