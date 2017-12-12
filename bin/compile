@@ -49,7 +49,6 @@ libgl1-mesa-glx
 libgl1-mesa-dri
 libegl1-mesa
 mesa-utils-extra
-xvfb
 EOF
 
 	local cache_tmpdir=$(mktemp -d)
@@ -99,7 +98,7 @@ freedom_patch_xvfb() {
 	# patch Xvfb to use /app/.. paths instead of hardcoded wrong values
 	sed -i s:/usr/bin:/app/nib: "$BUILD_DIR/.apt/usr/bin/Xvfb"
 	# create symlinks for Xvfb to use /app/.apt/usr/...
-	ln -s $BUILD_DIR/.apt/usr/bin $BUILD_DIR/nib
+	ln -s /app/.apt/usr/bin $BUILD_DIR/nib
 }
 
 install_system_deps
