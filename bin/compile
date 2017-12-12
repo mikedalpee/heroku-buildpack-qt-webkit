@@ -48,9 +48,7 @@ libgl1-mesa
 libgl1-mesa-glx
 libgl1-mesa-dri
 libegl1-mesa
-libudev1
-libXfont1
-libgcrypt11
+libXfont2
 mesa-utils-extra
 EOF
 
